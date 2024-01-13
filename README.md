@@ -1,2 +1,1 @@
-# final
-repo for busiiness project
+# Business

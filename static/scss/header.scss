@@ -1,0 +1,22 @@
+#header {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-brand {
+    font-weight: 600;
+  }  
+
+  .nav-item {
+    margin: 0 0 0 30px;
+  }
+
+  .nav-link {
+    padding: 0;
+
+    &.active {
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}

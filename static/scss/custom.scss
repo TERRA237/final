@@ -1,0 +1,242 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "variable";
+@import "topbar";
+@import "header";
+
+body {
+  font-family: $primary-font-family;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+}
+
+.container-fluid {
+  max-width: 1320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+// has background
+.has-background {
+  background: #f6f9fe;
+}
+
+// title-holder
+.title-holder {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 40px;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+// carousel
+.carousel {
+  .carousel-item {
+    position: relative;
+
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .carousel-caption {
+    bottom: 10%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 44px;
+    margin: 0 0 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+// accordion
+.accordion {
+  .accordion-item {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+
+  .accordion-button {
+    font-weight: 600;
+    border-radius: 0 !important;
+    transition: none !important;
+
+    &:after {
+      background: none;
+      content: "+";
+      font-size: 26px;
+      line-height: 0.7;
+      font-weight: 400;
+      transition: none !important;
+    }
+
+    &:not(.collapsed) {
+      background: $primary-color;
+      color: #fff;
+
+      &:after {
+        content: "-";
+        font-size: 32px;
+        line-height: 0.5;
+        padding: 0 0 0 5px;
+      }
+    }
+  }
+}
+
+// list group
+.list-group {
+  .list-group-item {
+    background: none;
+    border: none;
+    color: $white;
+
+    &:before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -1px;
+      font-size: 10px;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// gotop
+#goTop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  a {
+    background: $primary-color;
+    color: $white;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// services
+.services {
+  .holder {
+    border: 1px solid darken($white, 10%);
+    background: $white;
+    padding: 40px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s linear;
+
+    &:hover {
+      border-color: $white;
+      box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
+
+      .icon {
+        border-color: $primary-color;
+      }
+
+      h2 {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: darken($white, 3%);
+    border: 1px solid darken($white, 10%);
+    color: $primary-color;
+    font-size: 28px;
+    transition: border 0.3s linear;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 20px;
+    transition: color 0.3s linear;
+  }
+}
+
+// footer
+#footer {
+  background: lighten($black, 20%);
+  color: $white;
+  font-size: 14px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    strong {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  .social {
+    li {
+      margin: 0 20px 0 0;
+    }
+
+    a {
+      color: $white;
+      font-size: 24px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
